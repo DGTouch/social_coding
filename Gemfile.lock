@@ -39,6 +39,13 @@ GEM
     arel (6.0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bitters (1.0.0)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
+    bourbon (4.1.1)
+      sass (~> 3.3)
+      thor
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -56,7 +63,7 @@ GEM
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.3.0)
-    globalid (0.3.1)
+    globalid (0.3.2)
       activesupport (>= 4.1.0)
     hike (1.2.3)
     i18n (0.7.0)
@@ -76,6 +83,9 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
+    neat (1.7.1)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     rack (1.6.0)
@@ -150,10 +160,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
+  bourbon
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  neat
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

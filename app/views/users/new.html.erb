@@ -1,0 +1,12 @@
+<% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+  <% end -%>
+
+<div class="container">
+  <%= form_for @user do |f| %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.text_field :password %>
+  Password Confirmation: <%= f.text_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+  <% end %>
+</div>
