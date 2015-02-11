@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207160926) do
+ActiveRecord::Schema.define(version: 20150211045913) do
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "skill_level"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -21,5 +28,13 @@ ActiveRecord::Schema.define(version: 20150207160926) do
     t.datetime "updated_at",            null: false
     t.string   "password_digest"
   end
+
+  create_table "users_languages", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "part_id"
+  end
+
+  add_index "users_languages", ["part_id"], name: "index_users_languages_on_part_id"
+  add_index "users_languages", ["user_id"], name: "index_users_languages_on_user_id"
 
 end
