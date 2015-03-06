@@ -1,0 +1,13 @@
+<% @languages.each do |l| %>
+
+<div class="container">
+  <p>
+    <%= l.name %>
+    <%= l.skill_level %>
+    <%= link_to "Edit", edit_language_path(l.id) %>
+  </p>
+  <% end %>
+
+  <%= link_to "Add New Language", new_language_path %>
+
+</div>

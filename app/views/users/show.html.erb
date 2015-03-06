@@ -1,2 +1,11 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="container">
+
+<h1>Welcome User<%= @user.id %>! </h1>
+<p><% @user.languages.each do |l| %></p>
+  <p> <%= l.name %>
+      <%= l.skill_level %>
+  </p>
+  <% end %>
+  <%= link_to "add programming languages that you use!", languages_path %>
+</div>

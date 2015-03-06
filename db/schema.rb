@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20150211045913) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "languages_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "language_id"
+  end
+
+  add_index "languages_users", ["language_id"], name: "index_languages_users_on_language_id"
+  add_index "languages_users", ["user_id"], name: "index_languages_users_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password"
@@ -28,13 +36,5 @@ ActiveRecord::Schema.define(version: 20150211045913) do
     t.datetime "updated_at",            null: false
     t.string   "password_digest"
   end
-
-  create_table "users_languages", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "part_id"
-  end
-
-  add_index "users_languages", ["part_id"], name: "index_users_languages_on_part_id"
-  add_index "users_languages", ["user_id"], name: "index_users_languages_on_user_id"
 
 end

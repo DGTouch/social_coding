@@ -7,3 +7,19 @@
   @include outer-container;
 
 }
+
+
+nav{
+@include outer-container;
+height:100px;
+text-align:center;
+
+.navi-links{
+
+    li{
+      display: inline;
+      padding: 1.5em;
+    }
+}
+
+}
