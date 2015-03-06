@@ -17,3 +17,8 @@
  @import 'neat';
  @import 'base/base';
  @import 'users';
+
+.navi-links li {
+  float: left;
+  margin: 0 10px 0 0;
+}

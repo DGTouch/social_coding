@@ -1,4 +1,5 @@
 
+
 <div class="container">
 
 <h1>Welcome User<%= @user.id %>! </h1>
@@ -9,3 +10,6 @@
   <% end %>
   <%= link_to "add programming languages that you use!", languages_path %>
 </div>
+
+<h1><em><%= @user.name %></em>'s profile</h1>
+<a href="javascript:void(0);">Chat with <%= @user.name %> </a>
